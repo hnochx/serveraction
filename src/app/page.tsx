@@ -20,8 +20,11 @@ export default async function Home() {
         {/* List Container */}
         <div className="w-full max-w-md rounded-md shadow-md flex flex-col gap-4">
           {rows &&
-            rows.map((row) => (
-              <div className="text-white space-y-4 p-4 bg-gray-700 flex justify-between">
+            rows.map((row, index) => (
+              <div
+                className="text-white space-y-4 p-4 bg-gray-700 flex justify-between"
+                key={index}
+              >
                 {/* Replace with dynamic content */}
                 {row.name}
                 <RemoveButton name={row.name} />
